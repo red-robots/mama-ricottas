@@ -16,13 +16,26 @@ function my_login_logo() {
   $logo_url = ($logoImg) ? $logoImg[0] : '';
   if($custom_logo_id) { ?>
   <style type="text/css">
+    body.login {
+      background: #f6ebdd;
+    }
+    .login #login_error, .login .message, .login .success,
+    body.login form {
+      box-shadow: none!important;
+    }
     body.login div#login h1 a {
       <?php if($logo_url) { ?>
         background-image: url(<?php echo $logo_url; ?>);
       <?php } ?> 
       background-size: contain;
       width: 100%;
-      height: 67px;
+      height: 75px;
+    }
+    .login #backtoblog, .login #nav {
+      text-align: center;
+    }
+    .login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
+      color: #940b0b!important;
     }
   </style>
 <?php }
