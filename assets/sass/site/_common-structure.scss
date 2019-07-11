@@ -15,77 +15,229 @@ div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
+a { @include transition(all ease-out .3s) }
 .clear:before, .clear:after { content: " "; display: table; }
-.clear { *zoom: 1; }
-.clear {clear: both;}
+.clear { *zoom: 1; } .clear {clear: both;}
+.text-center {text-align:center;}
+body {
+	font-size: 14px;
+	line-height: 1.5;
+}
+.flexrow {
+	position: relative;
+	@include flexbox();
+	@include flexbox-wrap(wrap);
+	@include flexbox-direction(row);
+}
 .wrapper {
+	max-width: $maxwidth;
 	width: 100%;
 	margin: 0px auto;
-	padding: 20px;
-	
-	@media screen and (min-width: $tabwidth) {
-		width: 100%;
-	}
-	@media screen and (min-width: $deskwidth) {
-		width: 1200px;
-		padding: 0px;
-	}
+	padding: 0 20px;
 }
 
 .content-area {
 	width: 100%;
 	margin: 0px auto;
-	
-	@media screen and (min-width: $tabwidth) {
+	@include tab {
 		width: 66%;
 		float: left;
 		margin: 0;
-	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
 	}
 }
 
 .widget-area {
 	width: 100%;
 	margin: 0px auto;
-	
-	@media screen and (min-width: $tabwidth) {
+	@include tab {
 		width: 26%;
 		float: right;
 		margin: 0;
 	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
-	}
 }
 
 /* Logo */
-.logo , h1.logo {
-	width: 300px;
-	margin: 10px auto;
-
-	@media screen and (min-width: $tabwidth) {
-		width: 300px;
-		float: left;
-		margin: 0;
-	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
-	}
-}
-.logo a, h1.logo a {
-	width: 300px;
-	display: block;
-
-	@media screen and (min-width: $tabwidth) {
-		width: 300px;
-	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
-	}
-}
-.site-footer {
+.logo {
+	position: relative;
+	z-index: 20;
+	margin: 0 0;
+	line-height: 1;
+	text-align: center;
 	width: 100%;
-	clear: both;
+	@include mid {
+		height: 40px;
+	}
+	a {
+		display: inline-block;
+		width: 220px;
+		position: relative;
+		top: 0;
+		@include mid {
+			width: 230px;
+			top: 12px;
+		}
+		@include desk {
+			top: 8px;
+			width: 240px;
+		}
+		@include large {
+			top: 0;
+			width: 300px;
+		}
+	}
+	img {
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+}
+
+.site-header {
+	background-image: url("images/noise.png");
+	background-size: cover;
+	background-position: top center;
+	background-repeat: repeat;
+	background-color: $color-yellowish;
+	position: relative;
+	.wrapper {
+		max-width: 100%;
+		width: 100%;
+		padding: 0 0;
+	}
+}
+
+.site-footer {
+	.foottop {
+		color: #FFF;
+		background: $color-red;
+		.wrapper {
+			position: relative;
+			&:after {
+				content:"";
+				display: block;
+				width: 100%;
+				height: 1px;
+				background: #FFF;
+				position: absolute;
+				top: 48%;
+				left: 0;
+			}
+		}
+	}
+	.fbtn {
+		color: #FFF;
+		text-decoration: none;
+		display: inline-block;
+		padding: 33px 18px 30px 60px;
+		font-size: 16px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		position: relative;
+		z-index: 5;
+		background: $color-red;
+		@include mid {
+			padding: 40px 18px 38px 60px;
+		}
+		span {
+			position: absolute;
+			font-size: 28px;
+			line-height: 1;
+			left: 18px;
+			margin-top: -5px;
+		}
+		&:hover {
+			color: rgba(255,255,255,.5);
+		}
+	}
+}
+
+.footbottom {
+	color: $color-white2;
+	background: $color-brown;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border-bottom: 10px solid $color-light-brown;
+	a {
+		color: $color-white2;
+	}
+}
+.social-media {
+	text-align: center;
+	font-size: 16px;
+	line-height: 1;
+	.vertical-middle {
+		display: inline-block;
+		width: auto;
+		border-bottom: 1px solid $color-white2;
+		padding: 0 50px 15px 50px;
+	}
+	.sp {
+		display: inline-block;
+		padding: 0 0;
+		float: left;
+		height: 37px;
+		line-height: 40px;
+		position: relative;
+		a {
+			display: inline-block;
+			font-size: 20px;
+			position: relative;
+			top: 1px;
+			&:hover {
+				opacity: 0.4;
+			}
+		}
+		&.span1 {
+			padding: 0 15px 0 0;
+			font-size: 14px;
+			font-weight: 600;
+			letter-spacing: 1px;
+		}
+		&.span2 {
+			right: -8px;
+		}
+		&.span2 a {
+			padding: 0 8px;
+		}
+	}
+}
+.footer-text {
+	font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 1px;
+	padding: 15px 0 0;
+	max-width: 600px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.section-partners {
+	.flexrow {
+		@include flexbox-align-content(center);
+		@include flexbox-align-items(center);
+		@include flexbox-justify(center);
+	}
+	.info {
+		display: inline-block;
+		padding: 0 15px;
+		width: 30%;
+		text-align: center;
+		@include tab {
+			width: 20%;
+			padding: 0 20px;
+		}
+		@include mid {
+			width: auto;
+		}
+	}
+	.info img {
+		width: 100%;
+		height: auto;
+    	@include tab {
+    		width: auto;
+    		height: 90px;
+    	}
+	}
 }

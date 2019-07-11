@@ -14,7 +14,15 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	$('.flexslider').flexslider({
 		animation: "slide",
+		animationLoop: true
 	}); // end register flexslider
+
+	$('.foodimages').flexslider({
+		animation: "slide",
+		animationLoop: true,
+		controlNav: true,
+		directionNav: false
+	}); 
 	
 	/*
 	*
