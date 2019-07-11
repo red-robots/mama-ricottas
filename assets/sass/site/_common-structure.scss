@@ -64,8 +64,10 @@ body {
 	line-height: 1;
 	text-align: center;
 	width: 100%;
+	float: left;
 	@include mid {
 		height: 40px;
+		float: none;
 	}
 	a {
 		display: inline-block;
@@ -99,6 +101,7 @@ body {
 	background-repeat: repeat;
 	background-color: $color-yellowish;
 	position: relative;
+	z-index: 100;
 	.wrapper {
 		max-width: 100%;
 		width: 100%;
