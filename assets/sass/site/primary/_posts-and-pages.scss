@@ -189,10 +189,55 @@ body.home {
 		color: $color-red;
 	}
 }
+
+
+.page-link-list {
+	ul {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+	}
+	li {
+		position: relative;
+		padding-left: 12px;
+		font-size: 18px;
+		&:before {
+			content:"";
+			display: block;
+			width: 6px;
+			height: 6px;
+			background: $color-red;
+			position: absolute;
+			top: 12px;
+			left: 0;
+			border-radius: 100%;
+		}
+	}
+	a {
+		color: $color-red;
+		display: inline-block;
+		text-decoration: none;
+		padding: 3px 0;
+		&:hover {
+			color: $color-light-brown;
+		}
+	}
+	ul ul {
+		padding-left: 20px;
+	}
+}
+
 .error-404.not-found {
 	padding-top: 40px;
 	padding-bottom: 50px;
+	font-size: 16px;
 	h1 {
 		margin-bottom: 0;
+	}
+	.page-link-list {
+		display: inline-block;
+		ul {
+			text-align: left;
+		}
 	}
 }

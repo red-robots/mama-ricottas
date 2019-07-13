@@ -14,12 +14,12 @@ get_header(); ?>
 
 			<section class="error-404 not-found text-center">
 				<header class="page-header">
-					<h1 class="entry-title"><?php esc_html_e( 'Ooops! That page can&rsquo;t be found.', 'acstarter' ); ?></h1>
+					<h1 class="entry-title"><i class="fas fa-exclamation-triangle"></i> <?php esc_html_e( 'Ooops! That page can&rsquo;t be found.', 'acstarter' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'Nothing was found at this location.', 'acstarter' ); ?></p>
-					<?php //get_template_part('template-parts/content','sitemap'); ?>
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below.', 'acstarter' ); ?></p>
+					<?php get_template_part('template-parts/content','sitemap'); ?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
