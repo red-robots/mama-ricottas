@@ -20,4 +20,13 @@
 	</div>
 	<?php } ?>
 	
+<?php }  else { ?>
+
+	<?php $banner = get_field("banner"); ?>
+	<?php if ($banner) { ?>
+	<div class="hero sub">
+		<img class="hero-image" src="<?php echo $banner['url'] ?>" alt="<?php echo $banner['title'] ?>" />
+	</div>	
+	<?php } ?>
+
 <?php } ?>

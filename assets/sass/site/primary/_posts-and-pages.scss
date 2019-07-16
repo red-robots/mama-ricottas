@@ -17,6 +17,17 @@
 			height: 700px!important;
 		}
 	}
+	&.sub {
+
+	}
+}
+
+body.subpage {
+	background-image:url("images/mainbg.jpg");
+	background-size: cover;
+	background-repeat: repeat-y;
+	background-position: top center;
+	background-color: $color-yellowish;
 }
 
 .section {
@@ -240,4 +251,50 @@ body.home {
 			text-align: left;
 		}
 	}
+}
+.medwrap {
+	max-width: 980px;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+.feat-image {
+	margin-bottom: 15px;
+	@include tab {
+		width: 32%;
+		float: left;
+		margin-bottom: 0;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+.entry-content {
+	&.half {
+		@include tab {
+			width: 66%;
+			float: right;
+			padding-top: 45px;
+		}
+	}
+	.bquote,
+	blockquote,
+	blockquote p {
+		font-family: $font-heading;
+		font-size: 30px;
+		line-height: 1.1;
+		color: $color-red;
+		padding: 0 0;
+		margin: 0 0;
+	}
+	.bquote, blockquote {
+		margin-bottom: 18px;
+	}
+}
+.author i {
+	font-weight: 400;
+	font-size: 16px;
+	font-style: italic;
+	color: $color-red;
 }

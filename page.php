@@ -12,7 +12,9 @@
  * @package ACStarter
  */
 
-get_header(); ?>
+get_header(); 
+$banner = get_field("banner");
+?>
 
 	<div id="primary" class="full-content-area clear default">
 		<main id="main" class="site-main clear" role="main">
