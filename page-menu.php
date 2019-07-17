@@ -15,6 +15,10 @@ $banner = get_field("banner");
 				<header class="entry-header">
 					<h1 class="entry-title title-center"><span class="left"></span><span class="middle"><?php the_title(); ?></span><span class="right"></span></h1>
 				</header>
+
+				<?php if ( get_the_content() ) { ?>
+				<div class="entry-content clear"><div class="medwrap" style="padding-bottom:0;"><?php the_content(); ?></div></div>
+				<?php } ?>
 				<?php 
 					$menus = get_field('menus');  
 				?>

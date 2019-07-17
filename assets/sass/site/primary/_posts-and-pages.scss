@@ -378,7 +378,7 @@ body.home {
 		line-height: 1;
 		color: $color-light-brown;
 		@include transition(all ease-out .3s);
-		@include lg {
+		@include desk {
 			font-size: 33px;
 		}
 	}

@@ -1667,7 +1667,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input
 select{border:1px solid #ccc}
 input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"]{padding:3px}
 textarea{padding-left:3px;width:100%}
-a{color:#0999f3}
+a{color:#940b0b}
 a:hover,a:focus,a:active{color:midnightblue}
 a:focus{outline:thin dotted}
 a:hover,a:active{outline:0}
@@ -1827,7 +1827,7 @@ a{-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .clear{*zoom:1}
 .clear{clear:both}
 .text-center{text-align:center}
-body{font-size:14px;line-height:1.5;overflow-x:hidden}
+body{font-size:15px;line-height:1.6;overflow-x:hidden}
 .flexrow{position:relative;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .wrapper{max-width:1240px;width:100%;margin:0 auto;padding:0 20px}
 .content-area{width:100%;margin:0 auto}
@@ -1941,7 +1941,8 @@ body.home .site-content.wrapper{max-width:100%;padding:0}
 .menu-info .mIcon .img1{background-position:top left;opacity:1;visibility:visible}
 .menu-info .mIcon .img2{background-position:top right;opacity:0;visibility:hidden}
 .menu-info .mTitle{display:block;width:100%;font-family:"Damion",cursive;font-size:30px;font-weight:400;line-height:1;color:#be9b7b;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
-.menu-info a{display:block;text-decoration:none}
+@media(min-width:1200px){.menu-info .mTitle{font-size:33px}
+}.menu-info a{display:block;text-decoration:none}
 .menu-info a:hover .mIcon .img1{opacity:0;visibility:hidden}
 .menu-info a:hover .mIcon .img2{opacity:1;visibility:visible}
 .menu-info a:hover .mTitle{color:#940b0b}
