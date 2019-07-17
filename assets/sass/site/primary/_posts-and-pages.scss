@@ -402,3 +402,30 @@ body.home {
 		}
 	}
 }
+
+.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit] {
+	background: $color-red;
+	color: #FFF;
+	font-weight: bold;
+	box-shadow: none;
+	text-shadow: none;
+	-webkit-appearance: none;
+	border: 1px solid $color-red;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 18px!important;
+    padding: 11px 20px 10px;
+    @include transition(all ease-out .3s);
+    &:hover {
+    	background: #e63b3a;
+    	border-color: #d02826;
+    }
+}
+.gform_wrapper select {
+	height: 35px;
+	line-height: 34px;
+}
+.contact-page .gform_wrapper {
+	max-width: 600px;
+	width: 100%;
+}
