@@ -24,6 +24,18 @@ jQuery(document).ready(function ($) {
 		directionNav: false
 	}); 
 	
+
+	if ( $(".entry-title.title-center").length > 0 ) {
+		var totalWidth = $(".entry-title.title-center").outerWidth();
+		var spanMiddle = $(".entry-title.title-center span.middle").outerWidth();
+		var midWidth = (parseFloat(spanMiddle)) + 40;
+		var tw = totalWidth - spanMiddle;
+		var sideWidth = (tw/2) - 20;
+		var side = sideWidth.toFixed(2);
+		$(".entry-title.title-center span.left").css("width",side+"px");
+		$(".entry-title.title-center span.right").css("width",side+"px");
+	}
+
 	/*
 	*
 	*	Colorbox
