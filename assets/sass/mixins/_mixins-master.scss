@@ -1,7 +1,8 @@
 @mixin tab { @media (min-width: $tabwidth) { @content; } }
 @mixin mid { @media (min-width: $midwidth) { @content; } }
 @mixin desk {  @media (min-width: $deskwidth) { @content; } }
-@mixin large {  @media (min-width: $largescreen) { @content; } }
+@mixin large {  @media (min-width: $maxwidth) { @content; } }
+@mixin xlarge {  @media (min-width: $largescreen) { @content; } }
 
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
