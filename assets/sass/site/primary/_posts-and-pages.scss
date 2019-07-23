@@ -429,7 +429,9 @@ body.home {
 }
 
 .menu-list {
-	margin-top: 20px;
+	max-width: 850px;
+	width: 100%;
+	margin: 20px auto 0;
 	@include tab {
 		margin-top: 40px;
 	}
@@ -437,13 +439,14 @@ body.home {
 
 .menu-info {
 	box-sizing: border-box;
-	padding: 20px;
+	padding: 30px 20px;
 	text-align: center;
-	@include tab {
+	width: 100%;
+	@media (min-width:500px) {
 		width: 50%;
 	}
-	@include mid {
-		width: 20%;
+	@include tab {
+		width: 33.333%;
 	}
 	.mIcon {
 		display: inline-block;
@@ -451,6 +454,10 @@ body.home {
 		height: 200px;
 		margin-bottom: 8px;
 		position: relative;
+		@include mid {
+			width: 120px;
+			height: 233px;
+		}
 		span {
 			display: block;
 			width: 100%;
@@ -478,12 +485,15 @@ body.home {
 		display: block;
 		width: 100%;
 		font-family: $font-heading;
-		font-size: 30px;
+		font-size: 25px;
 		font-weight: 400;
 		line-height: 1;
 		color: $color-light-brown;
 		@include transition(all ease-out .3s);
-		@include desk {
+		@include tab {
+			font-size: 28px;
+		}
+		@include mid {
 			font-size: 33px;
 		}
 	}

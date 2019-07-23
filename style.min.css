@@ -1949,17 +1949,19 @@ body.home .site-content.wrapper{max-width:100%;padding:0;position:relative;z-ind
 .entry-title.title-center span.left{left:0}
 .entry-title.title-center span.right{right:0}
 .entry-title.title-center span.middle{position:relative;left:-3px}
-.menu-list{margin-top:20px}
+.menu-list{max-width:850px;width:100%;margin:20px auto 0}
 @media(min-width:600px){.menu-list{margin-top:40px}
-}.menu-info{box-sizing:border-box;padding:20px;text-align:center}
-@media(min-width:600px){.menu-info{width:50%}
-}@media(min-width:930px){.menu-info{width:20%}
+}.menu-info{box-sizing:border-box;padding:30px 20px;text-align:center;width:100%}
+@media(min-width:500px){.menu-info{width:50%}
+}@media(min-width:600px){.menu-info{width:33.333%}
 }.menu-info .mIcon{display:inline-block;width:103px;height:200px;margin-bottom:8px;position:relative;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
-.menu-info .mIcon span{display:block;width:100%;height:100%;position:absolute;top:0;left:0;background-size:cover;background-repeat:no-repeat;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+@media(min-width:930px){.menu-info .mIcon{width:120px;height:233px}
+}.menu-info .mIcon span{display:block;width:100%;height:100%;position:absolute;top:0;left:0;background-size:cover;background-repeat:no-repeat;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .menu-info .mIcon .img1{background-position:top left;opacity:1;visibility:visible}
 .menu-info .mIcon .img2{background-position:top right;opacity:0;visibility:hidden}
-.menu-info .mTitle{display:block;width:100%;font-family:"Damion",cursive;font-size:30px;font-weight:400;line-height:1;color:#be9b7b;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
-@media(min-width:1200px){.menu-info .mTitle{font-size:33px}
+.menu-info .mTitle{display:block;width:100%;font-family:"Damion",cursive;font-size:25px;font-weight:400;line-height:1;color:#be9b7b;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+@media(min-width:600px){.menu-info .mTitle{font-size:28px}
+}@media(min-width:930px){.menu-info .mTitle{font-size:33px}
 }.menu-info a{display:block;text-decoration:none}
 .menu-info a:hover .mIcon .img1{opacity:0;visibility:hidden}
 .menu-info a:hover .mIcon .img2{opacity:1;visibility:visible}
