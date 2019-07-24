@@ -68,4 +68,15 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
+	/* Order Online Dropdown */
+	$(document).on("click","#top-menu #menu-item-90 a",function(e){
+		e.preventDefault();
+		$(".order-options").toggleClass('open');
+	});
+
+	$(document).on("click","#close-order",function(e){
+		e.preventDefault();
+		$(".order-options").removeClass('open');
+	});
+
 });// END #####################################    END

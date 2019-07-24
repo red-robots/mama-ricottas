@@ -29,7 +29,32 @@
 	<header id="masthead" class="site-header clear" role="banner">
 		<div class="wrapper">
 
-			<?php wp_nav_menu( array( 'menu' => 'Top Menu', 'menu_id' => 'top-menu', 'container_class'=>'topmenu' ) ); ?>
+			<div class="topmenuwrap clear">
+				<div class="topmenu">
+					<?php wp_nav_menu( array( 'menu' => 'Top Menu', 'menu_id' => 'top-menu', 'container'=>false ) ); ?>
+					<?php $order_options = get_field('order_options','option'); ?>
+					<?php if ($order_options) { ?>
+					<div class="order-options">
+						<?php foreach ($order_options as $o) { 
+							$o_link = $o['link'];
+							$o_logo = $o['logo'];  
+							$o_text = $o['text']; ?>
+							<?php if ($o_link && $o_logo) { ?>
+								<div class="orderlink">
+									<a href="<?php echo $o_link ?>" target="_blank">
+										<img src="<?php echo $o_logo['url'] ?>" alt="$o_logo['title']">
+										<?php if ($o_text) { ?>
+										<span class="text"><?php echo $o_text ?></span>	
+										<?php } ?>
+									</a>
+								</div>
+							<?php } ?>	
+						<?php } ?>
+						<div class="closediv clear"><a href="#" id="close-order">Close</a></div>
+					</div>
+					<?php } ?>
+				</div>
+			</div>
 
 			<?php if( get_custom_logo() ) { ?>
 	            <div class="logo">

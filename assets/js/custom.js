@@ -23,24 +23,17 @@ jQuery(document).ready(function ($) {
 		controlNav: true,
 		directionNav: false
 	}); 
+	
 
-
-	$( window ).resize(function() {
-	  title_text_center();
-	});
-
-	title_text_center();
-	function title_text_center() {
-		if ( $(".entry-title.title-center").length > 0 ) {
-			var totalWidth = $(".entry-title.title-center").outerWidth();
-			var spanMiddle = $(".entry-title.title-center span.middle").outerWidth();
-			var midWidth = (parseFloat(spanMiddle)) + 40;
-			var tw = totalWidth - spanMiddle;
-			var sideWidth = (tw/2) - 20;
-			var side = sideWidth.toFixed(2);
-			$(".entry-title.title-center span.left").css("width",side+"px");
-			$(".entry-title.title-center span.right").css("width",side+"px");
-		}
+	if ( $(".entry-title.title-center").length > 0 ) {
+		var totalWidth = $(".entry-title.title-center").outerWidth();
+		var spanMiddle = $(".entry-title.title-center span.middle").outerWidth();
+		var midWidth = (parseFloat(spanMiddle)) + 40;
+		var tw = totalWidth - spanMiddle;
+		var sideWidth = (tw/2) - 20;
+		var side = sideWidth.toFixed(2);
+		$(".entry-title.title-center span.left").css("width",side+"px");
+		$(".entry-title.title-center span.right").css("width",side+"px");
 	}
 
 	/*
@@ -73,6 +66,17 @@ jQuery(document).ready(function ($) {
 		if(mobile_nav_height>parentdiv) {
 			$('.mobile-navigation').addClass("overflow-height");
 		}
+	});
+
+	/* Order Online Dropdown */
+	$(document).on("click","#top-menu #menu-item-90 a",function(e){
+		e.preventDefault();
+		$(".order-options").toggleClass('open');
+	});
+
+	$(document).on("click","#close-order",function(e){
+		e.preventDefault();
+		$(".order-options").removeClass('open');
 	});
 
 });// END #####################################    END
