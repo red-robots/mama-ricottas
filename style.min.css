@@ -1891,7 +1891,7 @@ body{font-size:15px;line-height:1.6;overflow-x:hidden}
 .hero iframe{width:100% !important;height:400px !important}
 @media(min-width:930px){.hero iframe{height:600px !important}
 }@media(min-width:1200px){.hero iframe{height:700px !important}
-}.hero .videowrap{background:#000;width:100% !important;height:auto;min-height:200px;position:relative;float:left}
+}.hero .videowrap{background-color:#000;background-size:cover;background-position:center;background-repeat:no-repeat;width:100% !important;height:auto;min-height:200px;position:relative;float:left}
 @media(min-width:600px){.hero .videowrap{height:330px}
 }@media(min-width:700px){.hero .videowrap{height:400px}
 }@media(min-width:930px){.hero .videowrap{height:520px;overflow:hidden}

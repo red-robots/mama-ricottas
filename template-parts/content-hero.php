@@ -4,12 +4,14 @@
 	$image = get_field('hero_image');
 	$video = get_field('hero_video');
 	$video_ogg = get_field('hero_video_ogg');
+	$video_thumb = get_field('video_thumbnail');
+	$styles = ($video_thumb ) ? ' style="background-image:url('.$video_thumb['url'].')"':'';
 
 	if ($image || $video) { ?>
 	<div class="hero clear">
 		<?php if ($type=='video') { ?>
 			<?php if ($video) { ?>
-			<div class="videowrap">
+			<div class="videowrap"<?php echo $styles ?>>
 				<video id="video" width="400" height="300" muted playsinline loop>
 					<source src="<?php echo $video; ?>" type="video/mp4">
 					<?php if ($video_ogg) { ?>
