@@ -1989,7 +1989,8 @@ body.home .site-content.wrapper{max-width:100%;padding:0;position:relative;z-ind
 .gform_wrapper .gform_footer input.button:hover,.gform_wrapper .gform_footer input[type=submit]:hover,.gform_wrapper .gform_page_footer input.button:hover,.gform_wrapper .gform_page_footer input[type=submit]:hover{background:#e63b3a;border-color:#d02826}
 .gform_wrapper select{height:35px;line-height:34px}
 .default.contact-page .site-main{padding-top:0}
-.default.contact-page .contactForm{margin-bottom:30px}
+@media(min-width:600px){.default.contact-page .site-main{padding-top:50px}
+}.default.contact-page .contactForm{margin-bottom:30px}
 @media(min-width:600px){.default.contact-page .contactForm{width:51%;float:left;margin-bottom:0}
 }@media(min-width:600px){.default.contact-page .entry-content{width:40%;float:right}
 }@media(min-width:930px){.default.contact-page .entry-content{width:38%}

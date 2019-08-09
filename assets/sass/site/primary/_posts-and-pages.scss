@@ -546,6 +546,9 @@ body.home {
 .default.contact-page {
 	.site-main {
 		padding-top: 0;
+		@include tab {
+			padding-top: 50px;
+		}
 	}
 	.contactForm {
 		margin-bottom: 30px;
