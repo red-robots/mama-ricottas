@@ -546,7 +546,7 @@ body.home {
 .default.contact-page {
 	.site-main {
 		padding-top: 0;
-		@include tab {
+		@include mid {
 			padding-top: 50px;
 		}
 	}
