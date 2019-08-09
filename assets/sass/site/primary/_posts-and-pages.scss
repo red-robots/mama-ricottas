@@ -543,7 +543,30 @@ body.home {
 	height: 35px;
 	line-height: 34px;
 }
-.contact-page .gform_wrapper {
-	max-width: 600px;
-	width: 100%;
+.default.contact-page {
+	.site-main {
+		padding-top: 0;
+	}
+	.contactForm {
+		margin-bottom: 30px;
+		@include tab {
+			width: 51%;
+			float: left;
+			margin-bottom: 0;
+		}
+	}
+	.entry-content {
+		@include tab {
+			width: 40%;
+			float: right;
+		}
+		@include mid {
+			width: 38%;
+		}
+	}
+	.gform_wrapper {
+		max-width: 100%;
+		width: 100%;
+	}
 }
+

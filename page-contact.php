@@ -12,24 +12,25 @@ $banner = get_field("banner");
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
+				<?php  
+					$contact_form = get_field('contact_form');
+				?>
+
 				<div class="fullwidth clear">
 					<header class="entry-header">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 					</header>
-
-					<?php 
-						$photo = get_the_post_thumbnail(); 
-					?>
-
-					<?php if ( $photo ) { ?>
-					<div class="feat-image">
-						<?php echo the_post_thumbnail('large'); ?>
-					</div>
+					
+					<?php if ($contact_form) { ?>
+					<div class="contactForm">
+						<?php echo $contact_form ?>
+					</div>	
 					<?php } ?>
 
-					<div class="entry-content <?php echo ($photo) ? 'half':'full';?>">
+					<div class="entry-content">
 						<?php the_content(); ?>
 					</div>
+
 				</div>
 
 			<?php endwhile; ?>
