@@ -1925,11 +1925,10 @@ body.subpage{background-image:url("images/mainbg.jpg");background-size:cover;bac
 .section.row1{background-image:url("images/img.png");background-position:center;background-repeat:no-repeat;background-size:cover;background-color:#f2e9da}
 .section.row2{padding:0;color:#FFF;background:#940b0b}
 .section.row2 .colwrap{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
-.section.row2 .flexbox{box-sizing:border-box;width:100%}
+.section.row2 .flexbox{box-sizing:border-box;width:100%;position:relative}
 @media(min-width:930px){.section.row2 .flexbox{width:50%}
 }.section.row2 .col1{padding:8% 6%;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-@media(min-width:930px){.section.row2 .col1{padding:3% 6%}
-}.section.row2 .col2{background:#6f1717}
+.section.row2 .col2{background:#6f1717}
 .section.row2 .flex-viewport,.section.row2 .foodimages,.section.row2 .foodimages ul,.section.row2 .foodimages li{height:100% !important;position:relative}
 .section.row2 .stitle{color:#FFF}
 .section.row2 li{position:relative}
@@ -1938,6 +1937,9 @@ body.subpage{background-image:url("images/mainbg.jpg");background-size:cover;bac
 .section.row2 .flex-control-nav{bottom:5px;z-index:10}
 .section.row2 .flex-control-paging li a{background:transparent;border:1px solid #FFF}
 .section.row2 .flex-control-paging li a.flex-active{background:#940b0b}
+body.is_safari .section.row2 .flexbox{width:100%}
+@media(min-width:930px){body.is_safari .section.row2 .flexbox{width:49.97%}
+}body.is_safari .section.row2 .flexbox.col2{right:-2px}
 .section.row3{background-image:url("images/img2.png");background-position:center;background-repeat:no-repeat;background-size:cover;background-color:#f2e9da;padding-top:40px}
 .section.row3 .icondiv{margin-bottom:0}
 .section.row3 .icondiv span{font-size:80px}

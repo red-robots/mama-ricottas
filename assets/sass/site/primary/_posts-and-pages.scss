@@ -213,6 +213,7 @@ body.subpage {
 	.flexbox {
 		box-sizing: border-box;
 		width: 100%;
+		position: relative;
 		@include mid {
 			width: 50%;
 		}
@@ -221,9 +222,6 @@ body.subpage {
 		padding: 8% 6%;
 		@include flexbox();
 		@include flexbox-align-items(center);
-		@include mid {
-			padding: 3% 6%;
-		}
 	}
 	.col2 {
 		background: $color-dark-red;
@@ -266,6 +264,19 @@ body.subpage {
 		border: 1px solid #FFF;
 		&.flex-active {
 			background: $color-red;
+		}
+	}
+}
+body.is_safari {
+	.section.row2 {
+		.flexbox {
+			width: 100%;
+			@include mid {
+				width: 49.97%;
+			}
+			&.col2 {
+				right: -2px;
+			}
 		}
 	}
 }
