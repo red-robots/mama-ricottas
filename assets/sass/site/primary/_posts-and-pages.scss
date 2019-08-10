@@ -573,3 +573,53 @@ body.home {
 	}
 }
 
+.foot-contact-info {
+	text-align: center;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	.midwrap {
+		display: inline-block;
+		position: relative;
+		border-bottom: 1px solid #fff4e6;
+		padding-bottom: 15px;
+	}
+	.span2 {
+		display: block;
+		width: 100%;
+		text-align: center;
+		a {
+			margin: 0 4px;
+			font-size: 25px;
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+
+	address {
+		font-style: normal;
+		font-size: 14px;
+		line-height: 1.5;
+		margin: 0 0;
+		a {
+			display: inline-block;
+			text-decoration: none;
+		}
+	}
+	.col3 {
+		display: inline-block;
+		text-align: center;
+		padding: 20px 50px;
+		line-height: 1.5;
+	}
+	.vertical-middle {
+		.span1 {
+			position: relative;
+			top: -8px;
+		}
+	}
+}
+
+
+
