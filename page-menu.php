@@ -25,7 +25,7 @@ $banner = get_field("banner");
 
 				<?php if ($menus) { ?>
 				<div class="menu-list clear">
-					<div class="flexrow">
+					<div class="menuflex flexrow">
 					<?php foreach ($menus as $m) { 
 						$menu_icon = $m['icon'];
 						$menu_title = $m['menu_title'];

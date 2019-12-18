@@ -1971,6 +1971,7 @@ body.home .site-content.wrapper{max-width:100%;padding:0;position:relative;z-ind
 .entry-title.title-center span.right{right:0}
 .entry-title.title-center span.middle{position:relative;left:-3px}
 .menu-list{max-width:850px;width:100%;margin:20px auto 0}
+.menu-list .menuflex{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 @media(min-width:600px){.menu-list{margin-top:40px}
 }.menu-info{box-sizing:border-box;padding:30px 20px;text-align:center;width:100%}
 @media(min-width:500px){.menu-info{width:50%}
