@@ -47,6 +47,8 @@ jQuery(document).ready(function ($) {
 		height: '80%'
 	});
 
+	$(".inline").colorbox({inline:true, width:"50%"});
+
 
 	/*
 	*
