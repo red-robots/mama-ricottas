@@ -104,10 +104,10 @@
 
 <?php if ( is_front_page() ) { ?>
 	<script type="text/javascript">
-		jQuery(document).ready(function ($) {
-	// Popup
+	// 	jQuery(document).ready(function ($) {
+	// // Popup
 			
-		});
+	// 	});
 	</script>
 <script type="text/javascript">
 
@@ -116,7 +116,8 @@
 
 /* Video Controls */
 window.onload = function() {
-	$.colorbox({inline:true, href:".ajax"});
+	// popuup
+	//$.colorbox({inline:true, href:".ajax"});
 	// Video
 	var video = document.getElementById("video");
 	document.getElementById('video').play();
