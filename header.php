@@ -50,10 +50,13 @@ Global site tag (gtag.js) - Google Analytics -->
 <body <?php body_class(); ?>>
 <!-- Gift Card popup -->
 <?php 
-$active = get_field('toggle_on', 'option');
+$active = get_field('turn_on_popup', 'option');
 $offer = get_field('offer', 'option');
 $btnText = get_field('button_text', 'option');
 $btnLink = get_field('button_link', 'option');
+// echo '<pre>';
+// print_r($active);
+// echo '</pre>';
 
 if( $active[0] == 'turnon' && is_front_page() ) { ?>
 	<div style="display: none;">
