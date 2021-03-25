@@ -48,6 +48,27 @@ Global site tag (gtag.js) - Google Analytics -->
 </head>
 
 <body <?php body_class(); ?>>
+<!-- Gift Card popup -->
+<?php 
+$active = get_field('toggle_on', 'option');
+$offer = get_field('offer', 'option');
+$btnText = get_field('button_text', 'option');
+$btnLink = get_field('button_link', 'option');
+
+if( $active[0] == 'turnon' && is_front_page() ) { ?>
+	<div style="display: none;">
+		<div class='ajax popup' >
+			<a href="<?php echo $btnLink; ?>" target="_blank">
+				<?php echo $offer; ?>
+			</a>
+		<br>
+			<div class="view-btn">
+				<a href="<?php echo $btnLink; ?>" target="_blank"><?php echo $btnText; ?></a>
+			</div>
+		</div>
+	</div>
+<?php } ?>
+
 
 	<div style='display:none'>
 		<div id='inline_content' class="ajax popup">

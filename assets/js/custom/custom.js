@@ -38,6 +38,13 @@ jQuery(document).ready(function ($) {
 
 	/*
 	*
+	*	Homepage Popup
+	*
+	------------------------------------*/
+	// $.colorbox({inline:true, href:".ajax"});
+
+	/*
+	*
 	*	Colorbox
 	*
 	------------------------------------*/
