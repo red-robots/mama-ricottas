@@ -70,13 +70,13 @@ if( $active[0] == 'turnon' && is_front_page() ) { ?>
 <?php } ?>
 
 
-	<div style='display:none'>
+	<!-- <div style='display:none'>
 		<div id='inline_content' class="ajax popup">
 			<a href="https://direct.chownow.com/order/9704/locations/13254" target="_blank">
 				<img src="<?php bloginfo('template_url'); ?>/images/curbside.jpg">
 			</a>
 		</div>
-	</div>
+	</div> -->
 
 
 <div id="page" class="site clear">
